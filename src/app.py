@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify, url_for
 from flask_cors import CORS
 from utils import APIException, generate_sitemap
 from datastructures import FamilyStructure
+import json
 #from models import Person
 
 app = Flask(__name__)
@@ -37,6 +38,16 @@ def handle_hello():
 
 
     return jsonify(response_body), 200
+
+
+@app.route('/member', methods=['POST'])
+def add_member():
+   member = request.data 
+   member = json.loads(member)
+   jackson_family.add_member(member)
+   print(member)
+   return "Miembro agregado", 200
+
 
 # this only runs if `$ python src/app.py` is executed
 if __name__ == '__main__':
