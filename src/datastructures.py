@@ -15,6 +15,14 @@ class FamilyStructure:
         # example list of members
         self._members = []
 
+
+
+
+
+
+
+
+
     # read-only: Use this method to generate random members ID's when adding members into the list
     def _generateId(self):
         return randint(0, 99999999)
@@ -22,7 +30,7 @@ class FamilyStructure:
     def add_member(self, member):
         # fill this method and update the return
         self._members.append(member)
-        pass
+        return self._members
 
     def delete_member(self, id):
         # fill this method and update the return

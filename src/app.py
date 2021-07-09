@@ -49,6 +49,16 @@ def add_member():
    return "Miembro agregado", 200
 
 
+
+
+@app.route('/member', methods=[''])
+
+
+@app.route('/member', methods=[''])
+
+
+
+
 # this only runs if `$ python src/app.py` is executed
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 3000))
