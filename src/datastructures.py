@@ -30,7 +30,7 @@ class FamilyStructure:
             "first_name": "Jimmy",
             "last_name": "Jackson",
             "age": 5,
-            "lucky_numbers": 1
+            "lucky_numbers": [1]
         }]
 
     # read-only: Use this method to generate random members ID's when adding members into the list
@@ -39,13 +39,14 @@ class FamilyStructure:
 
     def add_member(self, member):
         # fill this method and update the return
-        self._members.append(member)
-        return self._members
+        self._member.append(member)
+        return self._member
 
     def delete_member(self, id):
         # fill this method and update the return
-        self._members.remove(member)
-        pass
+        member = self.get_member(id)
+        self._member.remove(member)
+        return self._member
 
     def get_member(self, id):
         # fill this method and update the return
